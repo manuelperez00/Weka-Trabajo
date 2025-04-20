@@ -2,7 +2,7 @@ import pandas as pd
 
 # Sustituye 'tu_archivo.csv' por la ruta de tu archivo original.
 # Asegúrate de que el CSV está realmente separado por punto y coma.
-df = pd.read_csv('./data/data.csv', sep=';')
+df = pd.read_csv('data/data.csv', sep=';')
 
 def infer_arff_type(series):
     """Determina si una columna es numérica o de texto."""
@@ -47,7 +47,7 @@ for index, row in df.iterrows():
 arff_content = "\n".join(arff_lines)
 
 # 4) Guardamos el contenido en un archivo ARFF
-with open('salida.arff', 'w', encoding='utf-8') as f:
+with open('archivo_trabajo.arff', 'w', encoding='utf-8') as f:
     f.write(arff_content)
 
-print("Archivo ARFF generado: salida.arff")
+print("Archivo ARFF generado: archivo_trabajo.arff")
