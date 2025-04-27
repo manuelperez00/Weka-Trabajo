@@ -42,10 +42,6 @@ def generate_arff(df_input, output_path, relation_name):
 
     # 1) Definición de atributos
     for col in df_input.columns:
-        # En caso de que el nombre de columna tenga espacios o caracteres
-        # especiales,
-        # puedes envolverlo en comillas simples o cambiarlo a algo más
-        # sencillo.
         if col.upper() == 'TARGET':
             unique_values = sorted(df_input[col].dropna().unique())
             # Los valores no llevan comillas
