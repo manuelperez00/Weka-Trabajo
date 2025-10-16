@@ -1,7 +1,5 @@
 import pandas as pd
 
-# Sustituye 'tu_archivo.csv' por la ruta de tu archivo original.
-# Asegúrate de que el CSV está realmente separado por punto y coma.
 df_complete = pd.read_csv('data/data.csv', sep=';')
 
 columns_to_drop = [
